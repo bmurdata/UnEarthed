@@ -7,7 +7,7 @@ const giftData=[
         "image":"",
         "description":"A gaming Console",
         "submittedBy":"Brian",
-        "submittedOn":"Today"
+        "submittedOn":"2023-09-23"
     },
     {
         "id": 2,

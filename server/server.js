@@ -1,4 +1,7 @@
 import express from 'express'
+import './config/dotenv.js'
+import { pool } from './config/database.js'
+
 import giftRouter from './routes/gifts.js'
 const app=express()
 
