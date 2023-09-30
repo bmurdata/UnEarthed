@@ -1,13 +1,14 @@
 import express from 'express'
 import './config/dotenv.js'
 import { pool } from './config/database.js'
-
+import cors from 'cors'
 import giftRouter from './routes/gifts.js'
 const app=express()
+app.use(cors())
 
-
-app.use('/public',express.static('./public'))
-app.use('/scripts',express.static('./public/scripts'))
+// Comment out static pages
+// app.use('/public',express.static('./public'))
+// app.use('/scripts',express.static('./public/scripts'))
 
 app.use('/gifts',giftRouter)
 app.get('/',(req,res)=> {

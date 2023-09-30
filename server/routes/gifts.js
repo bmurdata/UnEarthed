@@ -5,6 +5,7 @@ import path from 'path'
 import { fileURLToPath } from 'url'
 // Import data from DB
 import GiftsControler from '../controllers/gifts.js'
+
 // Import data from local file
 //import giftData from '../data/giftsData.js'
 
@@ -18,8 +19,10 @@ giftRouter.get('/',GiftsControler.getGifts)
 // giftRouter.get('/',(req,res)=> {
 //     res.status(200).json(giftData)
 // })
+
+/*
 giftRouter.get('/:giftId',(req,res)=>{
     res.status(200).sendFile(path.resolve(__dirname, '../public/gift.html'))
-})
-
+})*/
+giftRouter.get('/:giftId',GiftsControler.getGiftsById)
 export default giftRouter
